@@ -135,7 +135,7 @@
     }
     .copy-btn:hover { transform: scale(1.08); }
     .copy-btn:active { transform: scale(0.92) !important; }
-    .copy-btn.copied { color: rgba(74,222,128,0.9) !important; }
+    .copy-btn.copied { color: rgba(5, 78, 53, 0.603) !important; }
 
     #nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -148,7 +148,7 @@
     }
     #nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.45); }
 
-    .nav-logo { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 15px; color: rgba(220,190,255,0.9); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 15px; color: rgba(34, 125, 92, 0.511); letter-spacing: 0.04em; text-decoration: none; }
     .nav-logo span { color: #fff; }
     .nav-links { display: flex; gap: 3px; }
 
@@ -172,8 +172,8 @@
       border-bottom: 1px solid rgba(180,120,255,0.07);
       cursor: pointer; color: rgba(43, 78, 98); transition: color 0.2s;
     }
-    .mobile-menu-btn.active { color: rgba(54, 180, 79, 0.95); font-weight: 600; }
-    .mobile-menu-btn:hover { color: rgba(42, 168, 82, 0.8); }
+    .mobile-menu-btn.active { color: rgba(86, 15, 130, 0.95); font-weight: 600; }
+    .mobile-menu-btn:hover { color: rgba(11, 113, 83, 0.858); }
 
     @keyframes slideDown { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
 
@@ -189,12 +189,12 @@
     .section-inner.visible { opacity: 1; transform: translateY(0); }
 
     .section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
-    .section-label-line { width: 28px; height: 1px; background: rgba(22, 185, 109, 0.45); }
-    .section-label-text { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.22em; color: rgba(180,130,255,0.65); text-transform: uppercase; }
+    .section-label-line { width: 28px; height: 1px; background: rgba(19, 113, 98, 0.45); }
+    .section-label-text { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.22em; color: rgba(200, 100, 160, 0.65); text-transform: uppercase; }
 
     .section-heading { font-family: 'Syne', sans-serif; font-size: clamp(28px,5vw,46px); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; color: #fff; margin-bottom: 18px; }
-    .section-sub { display: block; font-size: clamp(13px,1.8vw,16px); font-weight: 400; color: rgba(190,150,255,0.6); margin-top: 7px; letter-spacing: 0.05em; }
-    .section-body { font-size: clamp(14px,1.7vw,16px); color: rgba(231, 213, 237, 0.65); line-height: 1.8; margin-bottom: 26px; }
+    .section-sub { display: block; font-size: clamp(13px,1.8vw,16px); font-weight: 400; color: rgba(31, 112, 102, 0.6); margin-top: 7px; letter-spacing: 0.05em; }
+    .section-body { font-size: clamp(14px,1.7vw,16px); color: rgba(197, 155, 227, 0.516); line-height: 1.8; margin-bottom: 26px; }
 
     .avatar-wrapper { margin-bottom: 28px; }
     .avatar-frame { width: 110px; height: 110px; border-radius: 50%; border: 2px solid rgba(200,150,255,0.3); box-shadow: 0 0 28px rgba(140,70,255,0.3), 0 0 0 5px rgba(140,70,255,0.07); overflow: hidden; background: rgba(20,5,40,0.8); transition: box-shadow 0.3s ease; }
@@ -214,9 +214,9 @@
     .wallet-symbol { font-family: 'IBM Plex Mono', monospace; font-size: 11px; opacity: 0.65; margin-right: 4px; }
 
     .exp-row { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(180,120,255,0.08); }
-    .exp-year { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(175,125,255,0.45); min-width: 40px; padding-top: 3px; flex-shrink: 0; }
+    .exp-year { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255, 255, 255, 0.45); min-width: 40px; padding-top: 3px; flex-shrink: 0; }
     .exp-role { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: rgba(230,210,255,0.9); margin-bottom: 3px; }
-    .exp-place { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(180,130,255,0.5); margin-bottom: 7px; }
+    .exp-place { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(255, 255, 255, 0.5); margin-bottom: 7px; }
     .exp-desc { font-size: 13px; color: rgba(195,165,230,0.58); line-height: 1.6; }
 
     .pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 8px #4ade80; animation: pulseDot 2s ease-in-out infinite; display: inline-block; }
@@ -243,20 +243,20 @@
         // import Avatars from './Avatar.jpeg'
     const { useState, useEffect, useRef } = React;
 
-    const SECTIONS = ["Introduction", "Experience", "Open to Work", "Socials"];
+    const SECTIONS = ["Introduction", "Experiences", "Open to Work", "Socials"];
 
     const CONTENT = {
       Introduction: {
         heading: "Treasure's port",
         sub: "DeFi Veteran · Computer Engineer",
-        body: "Hi anon! i'm Treasure, an active DeFi and web3 participant/contributor, and a part-time computer engineer. I've spent the past few years exploring protocols, supporting ecosystems, and learning how decentralized systems evolve in real time. I'm also typically driven by curiosity, community, and a long-term belief in building things that actually matter.",
+        body: "Hi anon! i'm Treasure, an active DeFi & Web3 pioneer/contributor, and also a part-time computer engineer. I've spent the past few years exploring protocols, supporting ecosystems, and learning how decentralized systems evolve in real time.",
       },
-      Experience: {
+      Experiences: {
         heading: "My Expertise",
         body: "over the past 4 years in DeFi and web3 ecosystems, i've contributed across protocol strategies, cross-chain initiatives, platforms management and social impact initiatives. I focus on fundamentals, strong community alignment, and long-term impact over short-term noise.",
         items: [
-          { year: "2025", role: "Protocol Contributor", place: "Plume Network", desc: "deep ecosystem interactions, Cross-chain yield research and strong ecosystem support." },
-          { year: "2024", role: "Social Platforms Manager", place: "memes", desc: "managed various social platforms and driven good community engagements." },
+          { year: "2025", role: "Protocol Contributions", place: "Plume Network", desc: "deep ecosystem interactions, Cross-chain yield research and strong ecosystem support." },
+          { year: "2024", role: "Social Platforms Management", place: "memes", desc: "managed various social platforms and driven good community engagements." },
           { year: "2023", role: "Onchain analysis", place: "Independent", desc: "Studied MEV and real-time transaction analysis across EVM networks." },
           { year: "2022", role: "NFTs & Memes", place: "Early DeFi", desc: "actively participated in the early stages of NFT and meme culture." },
         ],
@@ -274,7 +274,7 @@
         heading: "What I'm looking for",
         body: "I'm selectively open to high-conviction opportunities within serious, long-term web3 teams. Roles centered around ecosystem growth, protocol strategy, research, and community alignment interest me most. I value ownership over short-term upside and mission over momentum. If you're building something meant to last a decade, let's talk.",
         cta: "Reach out on Telegram or X",
-        ctaHref: "https://t.me/OxTreasure",
+        ctaHref: "",
       },
     };
 
@@ -369,7 +369,7 @@
 
 
 
-            {section === "Experience" && d.items.map((item, i) => (
+            {section === "Experiences" && d.items.map((item, i) => (
               <div key={i} className="exp-row">
                 <span className="exp-year">{item.year}</span>
                 <div>
